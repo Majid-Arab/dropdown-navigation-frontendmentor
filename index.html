@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .register-button {
+            border: 2px solid #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .learn-more-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .brand-images {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">snap</div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#">Features</a>
+                <div class="dropdown-content">
+                    <a href="#">Feature 1</a>
+                    <a href="#">Feature 2</a>
+                    <a href="#">Feature 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Company</a>
+                <div class="dropdown-content">
+                    <a href="#">About Us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <a href="#">Careers</a>
+            <a href="#">About</a>
+        </div>
+        <div class="buttons">
+            <a href="#">Login</a>
+            <a href="#" class="register-button">Register</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>Make Remote Work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <a href="#" class="learn-more-button">Learn More</a>
+            <div class="brand-images">
+                <!-- Add your brand images here -->
+                <img src="brand1.jpg" alt="Brand 1">
+                <img src="brand2.jpg" alt="Brand 2">
+                <img src="brand3.jpg" alt="Brand 3">
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Add your hero image here -->
+            <img src="hero-image.jpg" alt="Hero Image">
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -13,40 +157,43 @@
     />
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styleDesktop.css" />
   </head>
   <body>
     <div class="navbarBox">
       <nav>
-          <div class="logo">snap</div>
-          <img src="./images/icon-menu.svg" alt="open" id="menu-icon" />
+        <div class="logo">snap</div>
+        <img src="./images/icon-menu.svg" alt="open" id="menu-icon" />
       </nav>
       <div class="sidebar" id="sidebar">
-          <img src="./images/icon-close-menu.svg" alt="close" class="close-icon" id="close-icon" />
-          <ul>
-              <li>
-                  Features
-                  <ul class="dropdown">
-                      <li>Dropdown Item 1</li>
-                      <li>Dropdown Item 2</li>
-                      <!-- Add more dropdown items as needed -->
-                  </ul>
-              </li>
-              <li>Company
-                <ul class="dropdown">
-                  <li>Dropdown Item 1</li>
-                  <li>Dropdown Item 2</li>
-                  <!-- Add more dropdown items as needed -->
-              </ul>
-              </li>
-              <li>Careers</li>
-              <li>About</li>
-              <li>Login Register</li>
-          </ul>
+        <img
+          src="./images/icon-close-menu.svg"
+          alt="close"
+          class="close-icon"
+          id="close-icon"
+        />
+        <ul>
+          <li>
+            Features
+            <ul class="dropdown">
+              <li>Dropdown Item 1</li>
+              <li>Dropdown Item 2</li>
+            </ul>
+          </li>
+          <li>
+            Company
+            <ul class="dropdown">
+              <li>Dropdown Item 1</li>
+              <li>Dropdown Item 2</li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+          <li>Login Register</li>
+        </ul>
       </div>
-  </div>
+    </div>
 
     <div class="container">
       <img src="./images/image-hero-mobile.png" alt="" />
@@ -65,12 +212,12 @@
       </div>
     </div>
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script>
   </body>
-</html>
+</html> -->

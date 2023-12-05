@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .navbarBox {
+    display: flex;
+  }
+  
+  nav {
+    /* background-color: #333; */
+    color: #000;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Set navbar to cover the whole screen */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    margin-right: auto;
+  }

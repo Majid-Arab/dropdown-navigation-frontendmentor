@@ -9,8 +9,8 @@ body {
 }
 
 nav {
-  background-color: #333;
-  color: white;
+  /* background-color: #333; */
+  color: #000;
   padding: 15px;
   display: flex;
   align-items: center;
