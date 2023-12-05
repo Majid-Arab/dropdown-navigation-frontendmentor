@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="navbarBox">
+      <nav>
+          <div class="logo">snap</div>
+          <img src="./images/icon-menu.svg" alt="open" id="menu-icon" />
+      </nav>
+      <div class="sidebar" id="sidebar">
+          <img src="./images/icon-close-menu.svg" alt="close" class="close-icon" id="close-icon" />
+          <ul>
+              <li>
+                  Features
+                  <ul class="dropdown">
+                      <li>Dropdown Item 1</li>
+                      <li>Dropdown Item 2</li>
+                      <!-- Add more dropdown items as needed -->
+                  </ul>
+              </li>
+              <li>Company
+                <ul class="dropdown">
+                  <li>Dropdown Item 1</li>
+                  <li>Dropdown Item 2</li>
+                  <!-- Add more dropdown items as needed -->
+              </ul>
+              </li>
+              <li>Careers</li>
+              <li>About</li>
+              <li>Login Register</li>
+          </ul>
+      </div>
+  </div>
+
+    <div class="container">
+      <img src="./images/image-hero-mobile.png" alt="" />
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button>Learn more</button>
+
+      <div class="brands">
+        <img src="./images/client-databiz.svg" alt="" />
+        <img src="./images/client-audiophile.svg" alt="" />
+        <img src="./images/client-meet.svg" alt="" />
+        <img src="./images/client-maker.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="./script.js"></script>
+  </body>
+</html>

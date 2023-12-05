@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.navbarBox {
+  display: flex;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%; /* Set navbar to cover the whole screen */
+}
+
+.logo {
+  font-size: 1.5em;
+  margin-right: auto;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#menu-icon{
+    cursor: pointer;
+}
+
+.sidebar {
+  width: 0;
+  height: 100%;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #555;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
