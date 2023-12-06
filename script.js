@@ -33,18 +33,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Fixed Navbar Menu on Window Resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 992 && navbarMenu.classList.contains("is-active")) {
-      burgerMenu.classList.remove("is-active");
-      navbarMenu.classList.remove("is-active");
-      overlayMenu.classList.remove("is-active");
+  document.addEventListener("DOMContentLoaded", () => {
+  
+    // Check if the navbarMenu element exists
+    if (navbarMenu) {
+      // Fixed Navbar Menu on Window Resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 992 && navbarMenu.classList.contains("is-active")) {
+          burgerMenu.classList.remove("is-active");
+          navbarMenu.classList.remove("is-active");
+          overlayMenu.classList.remove("is-active");
+        }
+      });
     }
   });
 
   // Dark and Light Mode on Switch Click
-  darkSwitch.addEventListener("click", () => {
-    document.documentElement.classList.toggle("darkmode");
-    document.body.classList.toggle("darkmode");
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if the element with ID 'switch' exists
+    if (darkSwitch) {
+      darkSwitch.addEventListener("click", () => {
+        document.documentElement.classList.toggle("darkmode");
+        document.body.classList.toggle("darkmode");
+      });
+    }
   });
 
   // Login Modal Function
