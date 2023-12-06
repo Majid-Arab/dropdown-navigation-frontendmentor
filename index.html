@@ -21,19 +21,57 @@
         <div class="logoList">
           <a href="#" class="brand">snap</a>
           <ul class="menu-inner">
-            <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-            <li class="menu-item"><a href="#" class="menu-link">Feature</a></li>
+            <li class="menu-item">
+              <a href="#" class="menu-link"
+                >Feature <span class="arrow"></span
+              ></a>
+              <ul class="submenu">
+                <li><img src="./images/icon-todo.svg" alt="" />Todo List</li>
+                <li><img src="./images/icon-calendar.svg" alt="" />Calender</li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="" />Reminder
+                </li>
+                <li><img src="./images/icon-planning.svg" alt="" />Planning</li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link"
+                >Company <span class="arrow"></span
+              ></a>
+              <ul class="submenu">
+                <li>History</li>
+                <li>Out Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
             <li class="menu-item"><a href="#" class="menu-link">Pricing</a></li>
             <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
           </ul>
         </div>
         <div class="buttons">
           <button class="login btn-darken btn-inline">
-            <a href="#" class="menu-link">Log in</a>
+            <a href="#" class="menu-link loginBtn">Log in</a>
           </button>
           <button class="btn btn-darken btn-inline">
             <a href="#" class="menu-link">Register</a>
           </button>
+
+          <!-- Modal -->
+          <div id="overlay" class="overlay"></div>
+          <main class="loginbox">
+            <h1>Login</h1>
+            <div class="textbox">
+              <i style="font-size: 24px" class="fa">&#xf007;</i>
+
+              <input type="text" placeholder="username" name="" value="" />
+            </div>
+            <div class="textbox">
+              <i style="font-size: 24px" class="fa">&#xf023;</i>
+              <input type="password" placeholder="password" name="" value="" />
+            </div>
+            <input class="confirmlogin" type="button" name="" value="Sign In" />
+          </main>
+
           <button class="switch" id="switch">
             <i class="switch-light bx bx-sun"></i>
             <i class="switch-dark bx bx-moon"></i>
@@ -62,15 +100,20 @@
           <div class="banner-inner">
             <h1 class="heading-xl">Make remote work</h1>
             <p class="paragraph">
-              Get your team in sync, no matter your location. Streamline
-              processes, create team rituals, and watch productivity soar.
+              Get your team in sync, no matter your location. <br />
+              Streamline processes, create team rituals, and watch productivity
+              soar.
             </p>
             <button class="btn btn-darken btn-inline">Learn more</button>
             <div class="brands">
-              <img src="./images/client-databiz.svg" alt="" />
-              <img src="./images/client-audiophile.svg" alt="" />
-              <img src="./images/client-meet.svg" alt="" />
-              <img src="./images/client-maker.svg" alt="" />
+              <img src="./images/client-databiz.svg" alt="" class="brandImg" />
+              <img
+                src="./images/client-audiophile.svg"
+                alt=""
+                class="brandImg"
+              />
+              <img src="./images/client-meet.svg" alt="" class="brandImg" />
+              <img src="./images/client-maker.svg" alt="" class="brandImg" />
             </div>
           </div>
         </div>
