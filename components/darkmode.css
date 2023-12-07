@@ -1,0 +1,37 @@
+body.darkmode {
+  color: var(--color-white-100);
+  background-color: var(--color-black-400);
+}
+
+.switch {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.switch-light,
+.switch-dark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in;
+}
+.switch-light {
+  font-size: 1.45rem;
+  visibility: visible;
+  color: var(--color-black-300);
+}
+.darkmode .switch-light {
+  font-size: 0rem;
+  visibility: hidden;
+}
+.switch-dark {
+  font-size: 0rem;
+  visibility: hidden;
+  color: var(--color-white-100);
+}
+.darkmode .switch-dark {
+  font-size: 1.45rem;
+  visibility: visible;
+}
