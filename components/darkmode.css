@@ -5,13 +5,15 @@ body.darkmode {
 
 .switch {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  /* display: block; */
   cursor: pointer;
 }
 .switch-light,
 .switch-dark {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%);
@@ -34,4 +36,22 @@ body.darkmode {
 .darkmode .switch-dark {
   font-size: 1.45rem;
   visibility: visible;
+}
+
+/* Buttons  */
+
+.darkmode .btn-darken {
+  background-color: var(--color-blue-500);
+  color: var(--color-white-100);
+}
+.darkmode .btn-darken:hover {
+  background-color: var(--color-white-100);
+  color: var(--color-blue-500);
+}
+.darkmode .login {
+  color: var(--color-white-100);
+  background-color: var(--color-black-500);
+}
+.darkmode .login:hover {
+  color: var(--color-blue-100);
 }
