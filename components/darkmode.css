@@ -7,7 +7,6 @@ body.darkmode {
   position: relative;
   display: flex;
   align-items: center;
-  /* display: block; */
   cursor: pointer;
 }
 .switch-light,

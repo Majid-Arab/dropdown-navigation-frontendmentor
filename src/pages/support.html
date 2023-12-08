@@ -7,55 +7,70 @@
     <link rel="stylesheet" href="support.css" />
   </head>
   <body>
-    
-    <div class="container">
-      <div class="row">
-        <h1>contact us</h1>
+    <form id="contactForm">
+      <div class="container">
+        <div class="row">
+          <h1>contact us</h1>
+        </div>
+        <div class="row">
+          <h4 style="text-align: center">We'd love to hear from you!</h4>
+        </div>
+        <div class="row input-container">
+          <div class="col-xs-12">
+            <div class="styled-input wide">
+              <input type="text" required id="name" />
+              <label>Name</label>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="styled-input">
+              <input type="text" required id="email" />
+              <label>Email</label>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="styled-input" style="float: right">
+              <input type="text" required id="phone" />
+              <label>Phone Number</label>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="styled-input wide">
+              <textarea required id="message"></textarea>
+              <label>Message</label>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <input
+              class="confirmlogin btn-lrg submit-btn"
+              type="button"
+              name=""
+              value="Send Message"
+              onclick="submitContactForm()"
+            />
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <h4 style="text-align: center">We'd love to hear from you!</h4>
-      </div>
-      <div class="row input-container">
-        <div class="col-xs-12">
-          <div class="styled-input wide">
-            <input type="text" required />
-            <label>Name</label>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="styled-input">
-            <input type="text" required />
-            <label>Email</label>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="styled-input" style="float: right">
-            <input type="text" required />
-            <label>Phone Number</label>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="styled-input wide">
-            <textarea required></textarea>
-            <label>Message</label>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="btn-lrg submit-btn">Send Message</div>
-        </div>
-      </div>
-    </div>
+    </form>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbarPlaceholder = document.getElementById("navbar");
-        fetch("navbar.html")
-          .then((response) => response.text())
-          .then((data) => {
-            navbarPlaceholder.innerHTML = data;
-            // Add any additional JavaScript related to the navbar if needed
-          });
-      });
+      // Support Form Function
+
+      function submitContactForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        if (name.trim() !== "" && email.trim() !== "") {
+          const successMessage = `Contact successful!\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+          alert(successMessage);
+
+          document.getElementById("contactForm").reset();
+        } else {
+          alert("Please enter both name and email.");
+        }
+      }
     </script>
   </body>
 </html>

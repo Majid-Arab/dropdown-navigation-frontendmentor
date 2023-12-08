@@ -49,6 +49,30 @@ if (overlayMenu) {
   overlayMenu.addEventListener("click", toggleModal);
 }
 
+// Login Form Function 
+
+function submitForm() {
+  // Get the input values
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Check if username and password are not empty
+  if (username.trim() !== "" && password.trim() !== "") {
+      // Display success modal with entered values
+      const successMessage = `Login successful!\nUsername: ${username}\nPassword: ${password}`;
+      alert(successMessage);
+
+      // Reset the form
+      document.getElementById("loginForm").reset();
+      location.reload();
+  } else {
+      // Display error message if username or password is empty
+      alert("Please enter both username and password.");
+  }
+}
+
+// Dark Mode 
+
 document.addEventListener("DOMContentLoaded", () => {
   const darkSwitch = document.getElementById("switch");
 

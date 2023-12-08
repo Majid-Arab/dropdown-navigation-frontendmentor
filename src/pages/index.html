@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
       rel="stylesheet"
     />
@@ -49,7 +45,7 @@
           <button class="login btn-inline">
             <a href="#" class="menu-link loginBtn">Log in</a>
           </button>
-          <button class="btn btn-darken btn-inline">
+          <button class="register btn btn-darken btn-inline">
             <a href="#" class="menu-link loginBtn">Register</a>
           </button>
 
@@ -57,19 +53,19 @@
 
           <div id="overlay" class="overlay"></div>
 
-          <main class="loginbox" id="loginbox">
-            <h1>Login</h1>
-            <div class="textbox">
-              <i style="font-size: 24px" class="fa">&#xf007;</i>
-
-              <input type="text" placeholder="username" name="" value="" />
-            </div>
-            <div class="textbox">
-              <i style="font-size: 24px" class="fa">&#xf023;</i>
-              <input type="password" placeholder="password" name="" value="" />
-            </div>
-            <input class="confirmlogin" type="button" name="" value="Sign In" />
-          </main>
+          <form id="loginForm">
+            <main class="loginbox" id="loginbox">
+              <h1>Login</h1>
+              <div class="textbox">
+  
+                <input type="text" placeholder="username" name="username" value="" id="username"/>
+              </div>
+              <div class="textbox">
+                <input type="password" placeholder="password" name="password" value="" id="password"/>
+              </div>
+              <input class="confirmlogin" type="button" name="" value="Sign In" onclick="submitForm()"/>
+            </main>
+          </form>
 
         </div>
         <div class="burger" id="burger">
@@ -85,11 +81,6 @@
     <main class="main">
       <section class="section banner-section">
         <div class="container banner-column">
-          <!-- <img
-            class="banner-image"
-             src="https://i.ibb.co/sVqYmS2/Illustration.png" 
-            alt="Illustration"
-          /> -->
           <img
             class="banner-image"
             src="../../images/image-hero-desktop.png"
@@ -102,8 +93,8 @@
               Streamline processes, create team rituals, and watch productivity
               soar.
             </p>
-            <button class="btn btn-darken btn-inline">
-              <a href="#" class="menu-link">Learn more</a>
+            <button class="btn btn-darken btn-inline learnMore">
+              <a href="./support.html" class="menu-link ">Learn more</a>
             </button>
             <div class="brands">
               <img
