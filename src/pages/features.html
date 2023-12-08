@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: system-ui;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* background image with opacity */
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("https://images.pexels.com/photos/164357/pexels-photo-164357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .wrapper {
+      margin: 0 15px;
+      max-width: 960px;
+    }
+
+    h1 {
+      position: relative;
+      top: 0px;
+      animation: title 2s ease-in forwards;
+    }
+
+    @keyframes title {
+      0% {
+        top: -100vh;
+      }
+      100% {
+        top: 0;
+      }
+    }
+
+    .content {
+      margin: 25px 0 50px 0;
+      position: relative;
+      bottom: 0;
+      animation: content 2s ease-in forwards;
+    }
+
+    @keyframes content {
+      0% {
+        bottom: -100vh;
+      }
+      100% {
+        bottom: 0;
+      }
+    }
+
+    .btn {
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: all 0.3s linear;
+      animation: btn 1.5s ease-in 1.5s forwards;
+    }
+
+    @keyframes btn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <h1>Hi, how are you today?</h1>
+      <p class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+        officia ratione, minima provident illum architecto repellendus dicta
+        sequi aliquid corporis molestiae. Magnam in architecto quis voluptatum
+        repellat. Mollitia inventore minus placeat molestias eveniet officiis,
+        ex modi nemo illo animi quasi perspiciatis veniam voluptatem facilis
+        quis libero, temporibus voluptas cupiditate? Nesciunt iusto et quidem
+        cupiditate accusamus officia autem! Neque perspiciatis error et magnam
+        blanditiis ea adipisci id? Dolore, omnis provident fugit doloribus nihil
+        ipsum fugiat labore?
+      </p>
+      <a href="index.html" class="btn">Let me know</a>
+    </div>
+  </body>
+</html>
